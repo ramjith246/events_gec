@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ensure Full Black Background */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: black !important; /* Force black background */
+  color: white !important;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  border: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Ensure #root covers the entire viewport */
+#root {
   min-height: 100vh;
+  background-color: black !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* Ensure main content expands fully */
+main {
+  flex: 1;
+  background-color: black !important; /* Remove any white */
+  border: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Ensure Cards and Containers Have No Borders */
+.MuiCard-root,
+.MuiPaper-root,
+.MuiContainer-root,
+.MuiGrid-root,
+.MuiBox-root {
+  background-color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove Borders from Dialogs */
+.MuiDialog-root,
+.MuiDialogContent-root,
+.MuiDialogTitle-root,
+.MuiDialogActions-root {
+  background-color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove Default Button Shadows/Borders */
+button,
+.MuiButton-root {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove Any Possible Borders Around the Window */
+body::before,
+body::after,
+html::before,
+html::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure All Elements Default to Black */
+*::before, *::after {
+  background-color: black !important;
+  border: none !important;
 }

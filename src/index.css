@@ -1,5 +1,36 @@
-body {
+/* Global Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure Full Black Background */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background-color: black !important; /* Ensure full black */
+  color: white !important;
+  overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
+  border: none !important;
+}
+
+/* Ensure Root Fills Entire Viewport */
+#root {
+  min-height: 100vh;
+  background-color: black !important; /* Ensure complete black background */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove Any Unwanted Borders or Shadows */
+*::before, *::after {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Improve Font Rendering */
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +38,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure Material UI Components Don't Have White Borders */
+.MuiPaper-root,
+.MuiContainer-root,
+.MuiGrid-root,
+.MuiBox-root,
+.MuiDialog-root,
+.MuiDialogContent-root,
+.MuiDialogTitle-root,
+.MuiDialogActions-root {
+  background-color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure Code Blocks Are Styled Properly */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

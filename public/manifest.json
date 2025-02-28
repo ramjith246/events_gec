@@ -1,25 +1,45 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Events GEC",
+  "name": "Events GEC - College Event Platform",
+  "description": "A platform for managing college events",
+  "orientation": "portrait",
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot1.png",
+      "type": "image/png",
+      "sizes": "640x480"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Upcoming Events",
+      "short_name": "Events",
+      "description": "View upcoming events",
+      "url": "/events",
+      "icons": [{ "src": "/icons/shortcut-icon.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+events",
+      "url": "/?event=%s"
+    }
+  ],
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
+      "src": "/icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "/icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "background_color": "#ffffff",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "scope": "/",
+  "theme_color": "#1976d2"
 }
