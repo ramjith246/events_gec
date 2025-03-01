@@ -1,6 +1,16 @@
 // src/service-worker.ts
 /* eslint-disable no-restricted-globals */
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
+module.exports = {
+  // Other webpack configurations...
+  plugins: [
+    new WorkboxPlugin.InjectManifest({
+      swSrc: './src/service-worker.ts', // Path to your service worker file
+      swDest: 'service-worker.js', // Output service worker file
+    }),
+  ],
+};
 const CACHE_NAME = "pwa-cache-v1";
 const urlsToCache = ["/", "/index.html", "/favicon.ico"];
 
